@@ -3,6 +3,7 @@ import { Breadcrumbs } from "./breadcrumbs";
 import { fileSystem, updateFileSystem } from "../data";
 import { MenuBar } from "./menubar";
 import FileItem from "./fileitem";
+import { toast } from "sonner";
 
 export const FileBrowser = () => {
   const [path, setPath] = useState([]);
@@ -14,6 +15,7 @@ export const FileBrowser = () => {
     currentDir.children.push(newItem);
     setCurrentDir({ ...currentDir });
     updateFileSystem(fileSystem);
+    toast.success(`Created ${name}`);
   };
 
   const handleDelete = () => {
@@ -55,7 +57,7 @@ export const FileBrowser = () => {
             key={index}
             onClick={() => setSelectedItem(node)}
             className={`cursor-pointer ${
-              selectedItem?.name === node.name ? "bg-blue-200" : ""
+              selectedItem?.name === node.name ? "bg-blue-500/10" : ""
             }`}
           >
             <FileItem node={node} onFolderClick={handleFolderClick} />

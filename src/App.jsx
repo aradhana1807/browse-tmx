@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import "./App.css";
 import { FileBrowser } from "./components/filebrowser";
 import { Navbar } from "./components/navbar";
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <FileBrowser />
       </div>
+      <Toaster position="bottom-center" richColors />
     </ThemeProvider>
   );
 }
