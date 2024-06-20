@@ -44,7 +44,7 @@ export const FileBrowser = () => {
 
   return (
     <div className="p-5 max-w-2xl h-[70vh] border shadow-md rounded-md bg-gray-200 dark:bg-neutral-700 mx-auto mt-10">
-      <h1>File Browser</h1>
+      <h1 className="text-2xl font-bold py-2">File Browser</h1>
       <MenuBar onCreate={handleCreate} onDelete={handleDelete} />
 
       <Breadcrumbs path={path} navigateTo={navigateTo} />

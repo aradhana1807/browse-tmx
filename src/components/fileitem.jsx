@@ -5,12 +5,15 @@ const FileItem = ({ node, onFolderClick }) => {
   return (
     <div className="flex items-center mb-2">
       {node.isFolder ? (
-        <Folder className="mr-2 text-yellow-500" />
+        <Folder
+          fill="#f59e0b"
+          className="mr-2 text-[#f59e0b] dark:text-[#f59e0b]"
+        />
       ) : (
         <File className="mr-2 text-gray-500" />
       )}
       <button
-        className="text-blue-500"
+        className="text-blue-500 font-semibold dark:text-blue-200"
         onClick={() => node.isFolder && onFolderClick(node)}
       >
         {node.name}
