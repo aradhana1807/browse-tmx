@@ -5,7 +5,7 @@ import { Github } from "lucide-react";
 
 export const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between border shadow-sm bg-[#f1f1f1] dark:bg-[#1e1e1e] px-10 py-4">
+    <nav className="w-full flex items-center justify-between border shadow-sm bg-[#f1f1f1] dark:bg-[#1e1e1e] px-10 py-2">
       <div className="flex items-center">
         <Terminal className="w-6 h-6 mr-2" />
         <h1 className="text-2xl font-bold">WebTmux</h1>
